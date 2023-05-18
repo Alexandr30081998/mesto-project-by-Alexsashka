@@ -1,0 +1,22 @@
+.card-grid__like-button {
+  display: flex;
+  width: 22px;
+  height: 19px;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../../../images/Like-button.svg);
+}
+
+.card-grid__like-button:hover{
+  opacity: 0.6;
+}
+
+.card-grid__like-button:active{
+  background-image: url(../../../images/Like-button-active.svg);
+  opacity: 1;
+}
