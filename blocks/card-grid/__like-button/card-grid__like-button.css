@@ -10,10 +10,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../../../images/Like-button.svg);
+  cursor: pointer;
 }
 
 .card-grid__like-button:hover{
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .card-grid__like-button:active{

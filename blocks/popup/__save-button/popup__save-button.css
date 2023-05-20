@@ -11,10 +11,11 @@
   width: 358px;
   height: 50px;
   border: none;
-  font-family: 'Inter';
+  font-family: "Inter", "Arial", "sans-serif";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 535px) {
@@ -28,5 +29,5 @@
 }
 
 .popup__save-button:hover {
-  opacity: 0.8;
+  background: rgba(0, 0, 0, 0.8);
 }

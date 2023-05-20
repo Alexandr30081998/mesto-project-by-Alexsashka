@@ -4,9 +4,9 @@
   flex-direction: column;
   box-sizing: border-box;
   justify-content: center;
-  max-width: 880px;
   font-family: "Inter", "Arial", "sans-serif";
   padding: 0;
+  max-width: 880px;
 }
 
 @media screen and (max-width: 768px) {
