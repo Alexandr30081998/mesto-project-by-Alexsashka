@@ -4,7 +4,7 @@
   flex-direction: column;
   box-sizing: border-box;
   justify-content: center;
-  font-family: "Inter", "Arial", "sans-serif";
+  font-family: "Inter", "Arial", sans-serif;
   padding: 0;
   max-width: 880px;
 }
