@@ -13,11 +13,11 @@
   cursor: pointer;
 }
 
-.card-grid__like-button:hover{
+.card-grid__like-button:hover {
   opacity: 0.5;
 }
 
-.card-grid__like-button:active{
+.card-grid__like-button:active {
   background-image: url(../../../images/Like-button-active.svg);
   opacity: 1;
 }
