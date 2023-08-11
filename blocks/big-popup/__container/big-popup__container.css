@@ -1,0 +1,7 @@
+.big-popup__container {
+  flex-direction: column;
+  z-index: 3;
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+}

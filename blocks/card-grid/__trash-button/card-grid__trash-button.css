@@ -1,0 +1,22 @@
+.card-grid__trash-button {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../../images/musorka-icon.svg);
+  background-color: transparent;
+  width: 18px;
+  height: 19px;
+  bottom: 262px;
+  left: 242px;
+}
+
+
+.card-grid__trash-button:hover {
+  cursor:pointer;
+  opacity: 0.6;
+}

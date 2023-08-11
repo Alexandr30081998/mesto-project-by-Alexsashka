@@ -16,79 +16,45 @@
     </header>
     <main class="main">
       <section class="profile">
-        <img class="profile__avatar" src="./images/Kusto.jpg" alt="Жак-Ив Кусто">
+        <img class="profile__avatar" src="./images/Alexandr.jpg" alt="Жак-Ив Кусто">
         <div class="profile__info">
-          <h1 class="profile__name-text">Жак-Ив Кусто</h1>
-          <p class="profile__description-text">Исследователь океана</p>
+          <h1 class="profile__name-text">I LOVE PASSAT</h1>
+          <p class="profile__description-text">Фан-страничка ваговода</p>
           <button type="button" class="profile__change-button"></button>
         </div>
         <button type="button" class="profile__add-button"></button>
       </section>
       <section class="elements-grid">
-        <article class="card-grid">
-          <img class="card-grid__image" alt="Карачаевск" src="./images/Karachaevsk.jpg">
-          <div class="card-grid__description">
-            <h2 class="card-grid__desctiption-text">Карачаевск</h2>
-            <button type="button" class="card-grid__like-button"></button>
-          </div>
-        </article>
-        <article class="card-grid">
-          <img class="card-grid__image" alt="Эльбрус" src="./images/Elbrus.jpg">
-          <div class="card-grid__description">
-            <h2 class="card-grid__desctiption-text">Гора Эльбрус</h2>
-            <button type="button" class="card-grid__like-button"></button>
-          </div>
-        </article>
-        <article class="card-grid">
-          <img class="card-grid__image" alt="Домбай" src="./images/Dombai.jpg">
-          <div class="card-grid__description">
-            <h2 class="card-grid__desctiption-text">Домбай</h2>
-            <button type="button" class="card-grid__like-button"></button>
-          </div>
-        </article>
-        <article class="card-grid">
-          <img class="card-grid__image" alt="Река Ли" src="./images/Lee_river.jpg">
-          <div class="card-grid__description">
-            <h2 class="card-grid__desctiption-text">Река Ли</h2>
-            <button type="button" class="card-grid__like-button"></button>
-          </div>
-        </article>
-        <article class="card-grid">
-          <img class="card-grid__image" alt="Морейн Лейк" src="./images/Morein_lake.jpg">
-          <div class="card-grid__description">
-            <h2 class="card-grid__desctiption-text">Озеро Морейн</h2>
-            <button type="button" class="card-grid__like-button"></button>
-          </div>
-        </article>
-        <article class="card-grid">
-          <img class="card-grid__image" alt="Тяньцзы" src="./images/Tancsi.jpg">
-          <div class="card-grid__description">
-            <h2 class="card-grid__desctiption-text">Горы Тяньцзы</h2>
-            <button type="button" class="card-grid__like-button"></button>
-          </div>
-        </article>
+       <!-- Место для карточек -->
       </section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">© 2020 Mesto Russia</p>
     </footer>
 
-<div class="popup">
+<div class="popup popup_type-edit">
       <div class="popup__container">
         <button type="button" class="popup__close-button"></button>
         <h2 class="popup__container-title">Редактировать профиль</h2>
-        <form name="popup__edit-form" class="popup__edit-form">
+        <form name="popup__edit-form" class="popup__edit-form" id="editProfileForm">
           <input type="text" name="person-name" placeholder="Введите Имя" class="popup__input popup__input_text_person-name">
           <input type="text" name="description" placeholder="Введите описание" class="popup__input popup__input_text_description">
           <button type="submit" class="popup__save-button">Сохранить</button>
       </form>
       </div>
 </div>
-<div class="new-place-popup">
+<div class="popup popup_type-big">
+  <div class="big-popup__container">
+      <button aria-label="Закрыть" type="button" class="popup__close-button"></button>
+      <img class="big-popup__main-image" src="./images/empty" alt="big-popup__main-image">
+      <p class="big-popup__text"></p>
+  </div>
+</div>
+<div class="popup popup_type-new-place">
   <div class="popup__container">
-      <button aria-label="Закрыть" type="button" class="new-place-popup__close-button"></button>
+      <button aria-label="Закрыть" type="button" class="popup__close-button"></button>
       <h2 class="popup__container-title">Новое место</h2>
-      <form name="popup__edit-form" class="popup__edit-form">
+      <form name="popup__edit-form" class="popup__edit-form" id="addCardForm">
           <input type="text" id="name-place" name="new-place-popup_text_place-name" placeholder="Название"
               class="popup__input new-place-popup_text_place-name">
           <input type="text" id="img-url-place" name="new-place-popup_text_place-img-url"
@@ -97,6 +63,16 @@
       </form>
   </div>
 </div>
+<template id="card-template">
+  <article class="card-grid">
+    <img class="card-grid__image">
+    <button aria-label="Trash-button" type="button" class="card-grid__trash-button"></button>
+    <div class="card-grid__description">
+        <h2 class="card-grid__desctiption-text"></h2>
+        <button aria-label="Like-button" type="button" class="card-grid__like-button"></button>
+    </div>
+  </article>
+</template>
 <script src="./script.js"></script>
 </body>
 
