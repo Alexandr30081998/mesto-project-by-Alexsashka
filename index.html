@@ -32,7 +32,7 @@
       <p class="footer__copyright">© 2020 Mesto Russia</p>
     </footer>
 
-<div class="popup popup_type-edit">
+<div class="popup popup_type-edit popup_transition">
       <div class="popup__container">
         <button type="button" class="popup__close-button"></button>
         <h2 class="popup__container-title">Редактировать профиль</h2>
@@ -43,14 +43,14 @@
       </form>
       </div>
 </div>
-<div class="popup popup_type-big">
+<div class="popup popup_type-big popup_transition">
   <div class="big-popup__container">
       <button aria-label="Закрыть" type="button" class="popup__close-button"></button>
-      <img class="big-popup__main-image" src="./images/empty" alt="big-popup__main-image">
+      <img class="big-popup__main-image" src="./images/empty" alt="big-picture-image">
       <p class="big-popup__text"></p>
   </div>
 </div>
-<div class="popup popup_type-new-place">
+<div class="popup popup_type-new-place popup_transition">
   <div class="popup__container">
       <button aria-label="Закрыть" type="button" class="popup__close-button"></button>
       <h2 class="popup__container-title">Новое место</h2>
@@ -59,13 +59,13 @@
               class="popup__input new-place-popup_text_place-name">
           <input type="text" id="img-url-place" name="new-place-popup_text_place-img-url"
               placeholder="Ссылка на картинку" class="popup__input new-place-popup_text_place-img-url">
-          <button aria-label="Создать" type="submit" class="new-place-popup__add-button">Создать</button>
+          <button aria-label="Создать" type="submit" class="popup__save-button">Создать</button>
       </form>
   </div>
 </div>
 <template id="card-template">
   <article class="card-grid">
-    <img class="card-grid__image">
+    <img class="card-grid__image" alt="Card-Image">
     <button aria-label="Trash-button" type="button" class="card-grid__trash-button"></button>
     <div class="card-grid__description">
         <h2 class="card-grid__desctiption-text"></h2>
