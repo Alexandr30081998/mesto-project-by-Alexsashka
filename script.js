@@ -1,4 +1,3 @@
-const commonPopup = document.querySelector('.popup');// общий класс попап
 const popupProfileForms = document.querySelectorAll('.popup__edit-form');// форма общая для редактирования
 const elementsGrid = document.querySelector('.elements-grid');// общий контейнер для будущих карточек
 const editProfileForm = document.querySelector('#editProfileForm'); // форма для редактирования профиля
@@ -103,11 +102,13 @@ profileEditButton.addEventListener('click', function () {
     transferTextFromHeader();
 });
 
-function createCard(nameFromPopup, urlFromPopup) {
+function createCard(nameFromPopup, urlFromPopup, altText) {
   const cardTemplate = cardTemplateElement.content;
   const card = cardTemplate.querySelector('.card-grid').cloneNode(true);
+  const imageElement = card.querySelector('.card-grid__image');
+  imageElement.src = urlFromPopup;
+  imageElement.alt = altText;
   card.querySelector('.card-grid__desctiption-text').textContent = nameFromPopup;
-  card.querySelector('.card-grid__image').src = urlFromPopup;
 
   card.querySelector('.card-grid__like-button').addEventListener('click', function (evt) {
       evt.target.classList.toggle('card-grid__like-button_active');
@@ -125,6 +126,7 @@ function createCard(nameFromPopup, urlFromPopup) {
       const imgUrl = evt.target.src;
       openPopup(bigImgPopup);
       mainImg.src = imgUrl;
+      mainImg.alt = altText;
       bigText.textContent = card.querySelector('.card-grid__desctiption-text').textContent;
   });
 
@@ -142,6 +144,7 @@ addCardForm.addEventListener('submit', function (evt) {
   const card = createCard(cardName, imageUrl);
   renderCard(card);
   evt.target.reset();
+  closePopup(addPhotoPopup);
 });
 
 document.addEventListener('DOMContentLoaded', () => {
