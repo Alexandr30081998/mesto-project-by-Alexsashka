@@ -102,12 +102,12 @@ profileEditButton.addEventListener('click', function () {
     transferTextFromHeader();
 });
 
-function createCard(nameFromPopup, urlFromPopup, altText) {
+function createCard(nameFromPopup, urlFromPopup,) {
   const cardTemplate = cardTemplateElement.content;
   const card = cardTemplate.querySelector('.card-grid').cloneNode(true);
   const imageElement = card.querySelector('.card-grid__image');
   imageElement.src = urlFromPopup;
-  imageElement.alt = altText;
+  imageElement.alt = nameFromPopup;
   card.querySelector('.card-grid__desctiption-text').textContent = nameFromPopup;
 
   card.querySelector('.card-grid__like-button').addEventListener('click', function (evt) {
@@ -126,7 +126,7 @@ function createCard(nameFromPopup, urlFromPopup, altText) {
       const imgUrl = evt.target.src;
       openPopup(bigImgPopup);
       mainImg.src = imgUrl;
-      mainImg.alt = altText;
+      mainImg.alt = nameFromPopup;
       bigText.textContent = card.querySelector('.card-grid__desctiption-text').textContent;
   });
 
